@@ -13,6 +13,6 @@ public class Ball implements Shape{
     }
     @Override
     public void display(MySketch mysketch) {
-        mysketch.ellipse(speed(),height,radius,radius);
+        mysketch.ellipse(speed,height,radius,radius);
     }
 }
