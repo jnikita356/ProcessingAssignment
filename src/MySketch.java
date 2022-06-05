@@ -15,11 +15,14 @@ public class MySketch extends PApplet {
     @Override
     public void setup(){
         int x=0;
-        listofshapes.add(new Ball(0,HEIGHT/6,20,1));
-        listofshapes.add(new Box(0,HEIGHT*2/6,20,2));
-        listofshapes.add(new Ball(0,HEIGHT*3/6,20,3));
-        listofshapes.add(new Box(0,HEIGHT*4/6,20,4));
-        listofshapes.add(new Ball(0,HEIGHT*5/6,20,5));
+        for(int i=0;i<5;i++){
+            if(i%2==0){
+                listofshapes.add(new Ball(x,(HEIGHT*(i+1))/6,20,i+1));
+            }
+            else{
+                listofshapes.add(new Box(x,(HEIGHT*(i+1))/6,20,i+1));
+            }
+        }
     }
     @Override
     public void draw(){
